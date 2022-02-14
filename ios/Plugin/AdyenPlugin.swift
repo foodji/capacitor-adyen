@@ -65,7 +65,7 @@ public class AdyenPlugin: CAPPlugin {
     }
     
     @objc func handleAction(_ call: CAPPluginCall) {
-        let actionStr = call.getString("action") ?? ""
+        let actionStr = call.getString("value") ?? ""
         let action = try! JSONDecoder().decode(Action.self, from: Data(actionStr.utf8))
         self.dropInComponent.handle(action)
         call.resolve()
