@@ -1,7 +1,7 @@
 {
   "name": "capacitor-adyen",
   "version": "0.0.1",
-  "description": "foodji adyen plugin",
+  "description": "Provides API for the Adyen SDK",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -17,10 +17,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/foodji/cordova-plugin-adyen-sdk.git"
+    "url": "git+https://github.com/foodji/capacitor-adyen.git"
   },
   "bugs": {
-    "url": "https://github.com/foodji/cordova-plugin-adyen-sdk/issues"
+    "url": "https://github.com/foodji/capacitor-adyen/issues"
   },
   "keywords": [
     "capacitor",

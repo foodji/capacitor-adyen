@@ -1,6 +1,6 @@
 # capacitor-adyen
 
-foodji adyen plugin
+Provides API for the Adyen SDK
 
 ## Install
 
