@@ -1,3 +1,15 @@
 export interface AdyenPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  presentDropIn(options: DropInOptions): Promise<{ action: 'onSubmit' | 'onDetails', data: unknown }>;
+  dismissDropIn(): Promise<void>;
+
+  handleAction(action: { value: string }): Promise<any>;
+}
+
+export interface DropInOptions {
+  paymentMethodsResponse: string, // the paymentMethods response from the server
+  environment: 'test' | 'live', // or "live", default "test"
+  currencyCode: string,
+  countryCode: string,
+  amount: number, // in minor units (cents), so 123 in this case is "EUR 1,23"
+  paymentMethodsConfiguration: Record<string, unknown>// configuration for payment methods (like card, applepay, googlepay)
 }

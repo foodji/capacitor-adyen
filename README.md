@@ -13,25 +13,78 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`presentDropIn(...)`](#presentdropin)
+* [`dismissDropIn()`](#dismissdropin)
+* [`handleAction(...)`](#handleaction)
+* [Interfaces](#interfaces)
+* [Type Aliases](#type-aliases)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### presentDropIn(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+presentDropIn(options: DropInOptions) => Promise<{ action: 'onSubmit' | 'onDetails'; data: unknown; }>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| Param         | Type                                                    |
+| ------------- | ------------------------------------------------------- |
+| **`options`** | <code><a href="#dropinoptions">DropInOptions</a></code> |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;{ action: 'onSubmit' | 'onDetails'; data: unknown; }&gt;</code>
 
 --------------------
+
+
+### dismissDropIn()
+
+```typescript
+dismissDropIn() => Promise<void>
+```
+
+--------------------
+
+
+### handleAction(...)
+
+```typescript
+handleAction(action: { value: string; }) => Promise<any>
+```
+
+| Param        | Type                            |
+| ------------ | ------------------------------- |
+| **`action`** | <code>{ value: string; }</code> |
+
+**Returns:** <code>Promise&lt;any&gt;</code>
+
+--------------------
+
+
+### Interfaces
+
+
+#### DropInOptions
+
+| Prop                              | Type                                                             |
+| --------------------------------- | ---------------------------------------------------------------- |
+| **`paymentMethodsResponse`**      | <code>string</code>                                              |
+| **`environment`**                 | <code>'test' \| 'live'</code>                                    |
+| **`currencyCode`**                | <code>string</code>                                              |
+| **`countryCode`**                 | <code>string</code>                                              |
+| **`amount`**                      | <code>number</code>                                              |
+| **`paymentMethodsConfiguration`** | <code><a href="#record">Record</a>&lt;string, unknown&gt;</code> |
+
+
+### Type Aliases
+
+
+#### Record
+
+Construct a type with a set of properties K of type T
+
+<code>{ [P in K]: T; }</code>
 
 </docgen-api>

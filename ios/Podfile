@@ -9,6 +9,7 @@ end
 
 target 'Plugin' do
   capacitor_pods
+  pod 'Adyen', '~> 4.6.1'
 end
 
 target 'PluginTests' do
