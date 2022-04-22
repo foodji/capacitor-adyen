@@ -1,6 +1,6 @@
 {
   "name": "capacitor-adyen",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Provides API for the Adyen SDK",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
