@@ -8,6 +8,7 @@ export interface AdyenPlugin {
 export interface DropInOptions {
   paymentMethodsResponse: string, // the paymentMethods response from the server
   environment: 'test' | 'live', // or "live", default "test"
+  clientKey: string, // the public key linked to your API credential, used for client-side authentication.
   currencyCode: string,
   countryCode: string,
   amount: number, // in minor units (cents), so 123 in this case is "EUR 1,23"
