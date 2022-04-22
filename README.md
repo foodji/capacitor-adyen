@@ -18,6 +18,7 @@ npx cap sync
 * [`handleAction(...)`](#handleaction)
 * [Interfaces](#interfaces)
 * [Type Aliases](#type-aliases)
+* [Enums](#enums)
 
 </docgen-index>
 
@@ -71,7 +72,8 @@ handleAction(action: { value: string; }) => Promise<any>
 | Prop                              | Type                                                             |
 | --------------------------------- | ---------------------------------------------------------------- |
 | **`paymentMethodsResponse`**      | <code>string</code>                                              |
-| **`environment`**                 | <code>'test' \| 'live'</code>                                    |
+| **`environment`**                 | <code><a href="#adyenenvironment">AdyenEnvironment</a></code>    |
+| **`clientKey`**                   | <code>string</code>                                              |
 | **`currencyCode`**                | <code>string</code>                                              |
 | **`countryCode`**                 | <code>string</code>                                              |
 | **`amount`**                      | <code>number</code>                                              |
@@ -86,5 +88,16 @@ handleAction(action: { value: string; }) => Promise<any>
 Construct a type with a set of properties K of type T
 
 <code>{ [P in K]: T; }</code>
+
+
+### Enums
+
+
+#### AdyenEnvironment
+
+| Members    | Value               |
+| ---------- | ------------------- |
+| **`test`** | <code>'test'</code> |
+| **`live`** | <code>'live'</code> |
 
 </docgen-api>
